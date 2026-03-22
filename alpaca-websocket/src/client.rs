@@ -81,7 +81,7 @@ impl AlpacaWebSocketClient {
         let url = match feed {
             DataFeed::Iex => "wss://stream.data.alpaca.markets/v2/iex",
             DataFeed::Sip => "wss://stream.data.alpaca.markets/v2/sip",
-            DataFeed::Boats => "wss://stream.data.alpaca.markets/v2/boats",
+            DataFeed::Boats => "wss://stream.data.alpaca.markets/v1beta1/boats",
             DataFeed::Crypto => "wss://stream.data.alpaca.markets/v1beta3/crypto/us",
         };
 
