@@ -49,6 +49,8 @@ pub enum DataFeed {
     Iex,
     /// SIP data (paid, real-time)
     Sip,
+    /// BOATS data (extended hours overnight sessions)
+    Boats,
     /// Crypto data
     Crypto,
 }
@@ -79,6 +81,7 @@ impl AlpacaWebSocketClient {
         let url = match feed {
             DataFeed::Iex => "wss://stream.data.alpaca.markets/v2/iex",
             DataFeed::Sip => "wss://stream.data.alpaca.markets/v2/sip",
+            DataFeed::Boats => "wss://stream.data.alpaca.markets/v2/boats",
             DataFeed::Crypto => "wss://stream.data.alpaca.markets/v1beta3/crypto/us",
         };
 
